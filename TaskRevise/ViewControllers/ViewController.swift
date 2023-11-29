@@ -55,10 +55,10 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource,
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSizeMake(collectionView.frame.size.width / 3 , collectionView.frame.size.width / 3)
+        return CGSizeMake(collectionView.frame.size.width / 3 - 1, collectionView.frame.size.width / 3 )
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        return 1.5
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         performSegue(withIdentifier: "secondVC", sender: indexPath.row)
